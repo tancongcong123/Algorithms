@@ -8,7 +8,7 @@ import com.example.algorithms.PrintUtils;
 public class Array3 {
 
     // 1*1000+2*100+4*10+6*1
-    private static int[] nums = {1,2,4,6};
+    private static int[] nums = {9};
 //    private static int[] nums = {7,2,8,5,0,9,1,2,9,5,3,6,6,7,3,2,8,4,3,7,9,5,7,7,4,7,4,9,4,7,0,1,1,1,7,4,0,0,5};
 
     public static void main(String[] args){
@@ -16,24 +16,22 @@ public class Array3 {
     }
 
     private static int[] plusOne(int[] digits){
-        long newNumber = array2number(digits)+1;
-        return number2Array(newNumber);
-    }
-
-    private static long array2number(int[] digits){
-        long result = 0;
-        for (int i=0;i<digits.length;i++){
-            result+=Math.pow(10, digits.length-1-i)*digits[i];
+        int reminder = 0;
+        int index = digits.length-1;
+        while (index>=0){
+            int currentNumber = digits[index];
+            if (currentNumber>8){
+                reminder=1;
+                index--;
+            }else {
+                digits[index] = (currentNumber+1);
+                return digits;
+            }
         }
-        return result;
-    }
-
-    private static int[] number2Array(long number){
-        String str = String.valueOf(number);
-        int[] result = new int[str.length()];
-        for (int i = 0;i<str.length();i++){
-            result[i] = Integer.valueOf(str.substring(i, i+1));
-        }
+        if (reminder==0)
+            return digits;
+        int[] result = new int[digits.length+1];
+        result[0]=1;
         return result;
     }
 
