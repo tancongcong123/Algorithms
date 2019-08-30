@@ -61,4 +61,23 @@ public class String7 {
         System.out.println("cost time="+(System.currentTimeMillis()-start));
         System.out.println(PrintUtils.toString(s));
     }
+
+    public static String reverseString3(char[] s) {
+        if (s==null)
+            return null;
+        int i=0;
+        int j=s.length-1;
+        while (i<j){
+            char temp= s[i];
+            s[i] = s[j];
+            s[j] = temp;
+            i++;
+            j--;
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char c:s){
+            stringBuilder.append(c);
+        }
+        return stringBuilder.toString();
+    }
 }
