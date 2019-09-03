@@ -14,6 +14,7 @@ package com.example.algorithms.string2;
  *      -2147483648
  *      2147483647
  *      2147483647
+ *      147483
  *      0
  *      1
  *      0
@@ -25,6 +26,7 @@ public class String4 {
         System.out.println(myAtoi2("-91283472332"));
         System.out.println(myAtoi2("+91283472332"));
         System.out.println(myAtoi2("+2147483649"));
+        System.out.println(myAtoi2("147483"));
         System.out.println(myAtoi2("words and 987"));
         System.out.println(myAtoi2("+1"));
         System.out.println(myAtoi2("+-+-+++1"));
