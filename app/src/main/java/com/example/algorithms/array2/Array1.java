@@ -1,7 +1,5 @@
 package com.example.algorithms.array2;
 
-import com.example.algorithms.PrintUtils;
-
 import java.util.Arrays;
 
 /**

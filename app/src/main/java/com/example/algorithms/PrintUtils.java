@@ -1,5 +1,7 @@
 package com.example.algorithms;
 
+import com.example.algorithms.linkedList.ListNode;
+
 import java.util.List;
 
 public class PrintUtils {
@@ -71,6 +73,19 @@ public class PrintUtils {
         stringBuilder.append("[");
         for (int a=0;a<c.size();a++){
             stringBuilder.append(c.get(a));
+            if (a!=c.size()-1){
+                stringBuilder.append(",");
+            }
+        }
+        stringBuilder.append("]");
+        return stringBuilder.toString();
+    }
+
+    public static String toListString(List<ListNode> c){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("[");
+        for (int a=0;a<c.size();a++){
+            stringBuilder.append(c.get(a).getVal());
             if (a!=c.size()-1){
                 stringBuilder.append(",");
             }
