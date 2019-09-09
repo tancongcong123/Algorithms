@@ -1,6 +1,7 @@
 package com.example.algorithms;
 
 import com.example.algorithms.linkedList.ListNode;
+import com.example.algorithms.linkedList.ListNode2;
 
 import java.util.List;
 
@@ -87,6 +88,19 @@ public class PrintUtils {
             stringBuilder.append(node.val);
             stringBuilder.append("->");
             node = node.next;
+        }
+        stringBuilder.append("NULL");
+        return stringBuilder.toString();
+    }
+
+    public static String cycleLinked2String(ListNode2 node){
+        int i=0;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (node!=null && i<20){
+            stringBuilder.append(node.val);
+            stringBuilder.append("->");
+            node = node.next;
+            i++;
         }
         stringBuilder.append("NULL");
         return stringBuilder.toString();
