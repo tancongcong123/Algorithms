@@ -30,9 +30,9 @@ public class LinkedListdemo2 {
                 preNode = node;
             }
         }
-        System.out.println(PrintUtils.toListString(head));
+        System.out.println(PrintUtils.linked2String(head.get(0)));
         removeNthFromEnd(head.get(0), 1);
-        System.out.println(PrintUtils.toListString(head));
+        System.out.println(PrintUtils.linked2String(head.get(0)));
     }
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {

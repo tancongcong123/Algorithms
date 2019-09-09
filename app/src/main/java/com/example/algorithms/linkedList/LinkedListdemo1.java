@@ -29,7 +29,7 @@ public class LinkedListdemo1 {
                 preNode = node;
             }
         }
-        System.out.println(PrintUtils.toListString(head));
+        System.out.println(PrintUtils.linked2String(head.get(0)));
         ListNode delNode = new ListNode(9);
         deleteNode(delNode);
     }
@@ -43,16 +43,16 @@ public class LinkedListdemo1 {
             head.get(index-1).next = head.get(index+1);
         }
         head.remove(node);
-        System.out.println(PrintUtils.toListString(head));
+        System.out.println(PrintUtils.linked2String(head.get(0)));
     }
 
     public static void deleteNode2(ListNode node) {
         if (node.next==null){
-            System.out.println(PrintUtils.toListString(head));
+            System.out.println(PrintUtils.linked2String(head.get(0)));
             return;
         }
         node.val = node.next.val;
         node.next = node.next.next;
-        System.out.println(PrintUtils.toListString(head));
+        System.out.println(PrintUtils.linked2String(head.get(0)));
     }
 }

@@ -81,14 +81,14 @@ public class PrintUtils {
         return stringBuilder.toString();
     }
 
-    public static String toListString(List<ListNode> c){
+    public static String linked2String(ListNode node){
         StringBuilder stringBuilder = new StringBuilder();
-        for (int a=0;a<c.size();a++){
-            stringBuilder.append(c.get(a).getVal());
-            if (a!=c.size()-1){
-                stringBuilder.append("->");
-            }
+        while (node!=null){
+            stringBuilder.append(node.val);
+            stringBuilder.append("->");
+            node = node.next;
         }
+        stringBuilder.append("NULL");
         return stringBuilder.toString();
     }
 }

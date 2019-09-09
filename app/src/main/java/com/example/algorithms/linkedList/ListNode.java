@@ -3,8 +3,13 @@ package com.example.algorithms.linkedList;
 import androidx.annotation.Nullable;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
+
+    public ListNode getNext() {
+        return next;
+    }
+
     ListNode(int x) {
         val = x;
     }
