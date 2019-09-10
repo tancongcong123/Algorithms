@@ -61,12 +61,10 @@ public class LinkedListDemo6 {
             return false;
         ListNode2 slow = head;
         ListNode2 fast = head.next.next;
-        while (slow!=null || fast!=null){
+        while (fast.next != null && fast.next.next != null){
             if (slow==fast)
                 return true;
             slow = slow.next;
-            if (fast ==null || fast.next==null)
-                return false;
             fast = fast.next.next;
         }
         return false;
