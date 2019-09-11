@@ -64,4 +64,51 @@ public class TreeList {
         header.right.right = right;
         return header;
     }
+
+    /**
+     *     1
+     *    / \
+     *   2   2
+     *  / \ / \
+     * 3  4 4  3
+     * @return
+     */
+    public TreeNode initSymmetricTree(){
+        TreeNode header = new TreeNode(1);
+        TreeNode left = new TreeNode(2);
+        TreeNode right = new TreeNode(2);
+        header.left = left;
+        header.right = right;
+        left = new TreeNode(3);
+        right = new TreeNode(4);
+        header.left.left = left;
+        header.left.right = right;
+        left = new TreeNode(4);
+        right = new TreeNode(3);
+        header.right.left = left;
+        header.right.right = right;
+        return header;
+    }
+
+    /**
+     *     1
+     *    / \
+     *   2   2
+     *    \   \
+     *    3    3
+     * @return
+     */
+    public TreeNode initSymmetricTree2(){
+        TreeNode header = new TreeNode(1);
+        TreeNode left = new TreeNode(2);
+        TreeNode right = new TreeNode(2);
+        header.left = left;
+        header.right = right;
+        right = new TreeNode(3);
+        header.left.left = left;
+        header.left.right = right;
+        right = new TreeNode(3);
+        header.right.right = right;
+        return header;
+    }
 }
