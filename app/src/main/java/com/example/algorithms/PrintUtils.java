@@ -28,6 +28,27 @@ public class PrintUtils {
         return stringBuilder.toString();
     }
 
+    public static String toString(char[][] c){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("[\n");
+        for (int k=0;k<c.length;k++){
+            stringBuilder.append("  [");
+            for (int a=0;a<c[k].length;a++){
+                stringBuilder.append(c[k][a]);
+                if (a!=c[k].length-1){
+                    stringBuilder.append(",");
+                }
+            }
+            if (k==c.length-1){
+                stringBuilder.append("]");
+            }else {
+                stringBuilder.append("],\n");
+            }
+        }
+        stringBuilder.append("\n]");
+        return stringBuilder.toString();
+    }
+
     public static String toString(int[] c){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("[");
