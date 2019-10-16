@@ -10,7 +10,7 @@ public class ListNode {
         return next;
     }
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 
